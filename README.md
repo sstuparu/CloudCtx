@@ -1,4 +1,4 @@
-# CloudCtx
+# json tutorial
 
 1. Create a class CloudCtx that would hold the information for a hcloudCtx MO.
 2. From the json dict retrieve the following information and save it as object attributes:
