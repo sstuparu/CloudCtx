@@ -21,6 +21,19 @@
 
 9. Parse the below example JSON and create 3 CloudCtx that each has a HealthInst and display the following information: CloudCtx - name and tenant_name with corresponding health (displayed_health)
 
+10. Update method at point 4 to include the correspoding health information from HealthInst
+
+11. Display the ojects in order of the current health (cur attribute of healthInst) - lowest to highest
+
+12. Keep track of the number of CloudCtx objects instantiated (at any point you can display how many CloudCtx objects were created)
+
+13. Take into consideration that hcloudCtx MO may not have a healthInst. In this case you can make the assumption that the hcloudCtx MO has 0 health (most 'unhealthy') and add a new dictionary in the json example for this case (children will be empty list). Repeat tests at point 9/10/11
+
+14. Add an attribute to the CloudCtx object that displays when it was last modified ("modTs" key in json). The format should be the following: <day-month-year hour:minute:second Am/PM>. Add this information to the method created at point 3
+
+15. Display the ojects from the one modified most recently to the oldest one modified 
+
+
 ``` json
 {
    "totalCount":"3",
