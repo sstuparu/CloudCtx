@@ -1,11 +1,11 @@
 import unittest
 import json
-from cloud_ctx import CloudCtx
-from health_inst import HealthInst
+from components.cloud_ctx import CloudCtx
+from components.health_inst import HealthInst
 
 
 class JsonTests(unittest.TestCase):
-    with open('CloudCtx.json', 'r') as json_to_read:
+    with open('json_files/CloudCtx.json', 'r') as json_to_read:
         cloud_ctx_dict = json.load(json_to_read)
 
     total_hcloud_ctx_no = int(cloud_ctx_dict['totalCount'])
@@ -41,7 +41,7 @@ class JsonTests(unittest.TestCase):
         for i, obj in enumerate(objects):
             print(obj.name)
             print(obj.tenant_name)
-            obj.health_inst_object.displayed_health()
+            print(obj.health_inst_object.displayed_health)
             print('\n')
 
 
