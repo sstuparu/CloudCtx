@@ -20,10 +20,18 @@ class CloudCtx(JsonKeys):
         self.name_alias = cloud_ctx_attributes['nameAlias']
         self.ctx_profile_name = cloud_ctx_attributes['ctxProfileName']
 
-        self.last_modified = cloud_ctx_attributes['modTs']
         # self.last_modified = datetime.datetime.strptime(self.last_modified, "%Y-%m-%dT%H:%M:%S.%f%z")
-        self.last_modified_datetime_obj = datetime.datetime.fromisoformat(self.last_modified)
-        self.last_modified = datetime.datetime.strftime(self.last_modified_datetime_obj, "%d-%m-%Y %I:%M:%S %p")
+        self._last_modified_datetime_obj = datetime.datetime.fromisoformat(cloud_ctx_attributes['modTs'])
+        self.last_modified = datetime.datetime.strftime(self._last_modified_datetime_obj, "%d-%m-%Y %I:%M:%S %p")
+
+    def __repr__(self):
+        return f"Name: {self.name or '-'}\n" \
+               f"Tenant name: {self.tenant_name or '-'}\n" \
+               f"Description: {self.description or '-'}\n" \
+               f"Name alias: {self.name_alias or '-'}\n" \
+               f"Ctx profile name: {self.ctx_profile_name or '-'}\n" \
+               f"Current health: {self.health_inst_object.current_health or '-'}" \
+               f"Last modified: {self.last_modified or '-'}"
 
     def display_cloud_ctx_info(self):
         print(f"Name: {self.name or '-'}")

@@ -34,6 +34,8 @@ class JsonTests(unittest.TestCase):
             print(f"Object no {no}:\n{50 * '='}")
             hcloud_ctx_object.display_cloud_ctx_info()
 
+        print(hcloud_ctx_objects_list[0])
+
         # Ex 12 demo
         print(f"Number of CloudCtx objects instantiated: {CloudCtx.number_of_instantiated_objects}")
 
