@@ -27,21 +27,7 @@
                     "type": "regular"
                 },
                 "children": [
-                    {
-                        "healthInst": {
-                            "attributes": {
-                                "childAction": "",
-                                "chng": "0",
-                                "cur": "80",
-                                "maxSev": "cleared",
-                                "prev": "100",
-                                "rn": "health",
-                                "status": "",
-                                "twScore": "100",
-                                "updTs": "2020-10-27T12:46:50.008+00:00"
-                            }
-                        }
-                    }
+
                 ]
             }
         },
